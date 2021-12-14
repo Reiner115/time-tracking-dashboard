@@ -1,0 +1,398 @@
+<html>
+    <style>
+         .a{
+            background-color: #ff8b64;
+        }
+        .b{
+            background-color: #56c2e6;
+        }
+        .c{
+            background-color: #ff5e7d;
+        }
+        .d{
+            background-color: #4bcf83;
+        }
+        .e{
+            background-color: #7235d1;
+        }
+        .f{
+            background-color: #f1c75b;
+        }
+        body{
+            background-color: #0d1323;
+            margin: 0px;
+            padding: 0px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 20px;
+        }
+        .left{
+            width: 200px;
+            height: 420px;
+            background-color: #1d204b;
+            border-radius: 8px;
+            position: relative;    
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .left-top{
+           
+            background-color: #5746ea;
+            top: 0px;
+            left: 0px;
+            width: inherit;
+            height: 70%;
+            min-height:70% ;
+            border-radius: 8px;
+            display:flex;
+            flex-direction: column;
+            max-width: inherit;
+            max-height: 70%;
+            gap: 16px;
+            
+        }
+
+        .main-text{
+            color: white;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 16px;
+            margin-top: 0px;
+
+        }
+        .pale-blue{
+            color:hsl(236, 100%, 87%);
+            font-size: 12px;
+        }
+        .lower-text-wapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: max-content;
+            width: max-content;
+            height: -webkit-fill-available;
+            padding: 16;
+            color: #62659b;
+
+        }
+        .selected{
+            color: white;
+        }
+
+        .profile{
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border:2px solid white;
+            margin: 16px;
+            
+        }
+      
+        .other-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .row-container{
+            width: inherit;
+            height: 200px;
+            display: flex;
+            gap: 20px;
+            
+        }
+        .boxes-container{
+            width: 640;
+            height: 420;
+            display: flex;
+            align-items: center;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+        .box{
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 200px;
+            max-height: 200px;            
+            border-radius: 8px;
+            position: relative;
+            
+            
+        }
+       
+        .img{
+            right: 0px;
+            top: 0px;
+            display: block;
+            position: absolute;
+            width: 50px;
+        }
+       
+        .inner{
+            position: absolute;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 0px;
+            width: inherit;
+            height: 80%;
+            background-color: #1d204b;
+            border-radius: 8px;
+            
+        }
+        .first-row{
+            display: flex;           
+            align-items: center;
+            gap: 80px;
+            margin-left: 32px;
+        }
+       
+        .second-row{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            margin-left: 32px;
+        }
+        .left-text{
+            font-size: 24px;
+        }
+        .menu{
+            
+            height: 4px;
+        }
+        .time{
+          
+            font-size: 40px;
+        }
+        .week{
+            color: #9194c8;
+            
+        }
+
+        .my-grid{
+            width: 860px;
+            height: 420px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-columns:  1fr 3fr;                        
+            gap: 20px;
+        }
+        
+
+        .one{
+            
+        }
+        .two{
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+       
+
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width:768px) {
+                        .profile{
+                            height: 60px;
+                        }
+                        .left{
+                            height: 200px;
+                            width: inherit;        
+                        }
+                        .left-top{
+                            width: inherit;
+                            height: 60%;
+                            min-height: 60%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0px;
+                        }
+                        .week{
+                            color: #9194c8;
+                            margin-left: 0px;
+                            margin-top: 0px;
+                        }
+                        .my-grid{
+                            width: 400px;
+                            height: 420px;
+                            display: grid;
+
+                            grid-template-columns: 300px 1fr   ;    
+                            grid-template-columns: auto;                                
+                            gap: 20px;
+                        }
+                        .two{
+                            width: inherit;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            gap: 20px;
+                        }
+                        
+                        .box{
+                            width: inherit;
+                            min-width: 400px;            
+                        
+                        }
+                        .cover{
+                            display: flex;
+                            justify-content: center;
+                            gap: 16px;
+                        }
+                        .first-row{
+                            display: flex;           
+                            justify-content: space-around;
+                            align-items: center;
+                            margin-left: 32px;
+                        }
+                        .lower-text-wapper{
+                            margin-top: 20px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            width: inherit;
+                        }
+                        .second-row{
+                            flex-direction: row;
+                            align-items: center;
+                        }
+
+                }
+    </style>
+    <body>
+
+        <div class="my-grid">
+            
+            <div class="left">
+                <div class="left-top">
+                    <img src="image-jeremy.png" alt="" class="profile">
+                    
+                    <div class="main-text">
+                        <div class="small-text pale-blue">Report for</div>
+                        <div class="big-text">Jeremy Robson</div>
+                    </div>
+                </div>
+                <div class="lower-text-wapper ">
+                    <div class="text">Daily</div>
+                    <div class="text selected">Weekly</div>
+                    <div class="text">Monthly</div>
+                </div>
+    
+            </div>
+        
+
+               
+                
+                <div class="grid-item two">
+                   
+                    <div class="box a">
+                        <img src="icon-work.svg" alt="" class="img">
+                        <div class="cover">
+                            <div class="first-row">
+                                <div class="left-text selected">work</div>
+                                <img src="icon-ellipsis.svg" alt="" class="menu">
+                            </div>
+                            <div class="second-row">
+                                <div class="time selected">32hrs</div>
+                                <div class="week">Last Week - 63hrs</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                        <div class="box b">
+                            <img src="icon-play.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box c">
+                            <img src="icon-study.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box d">
+                            <img src="icon-exercise.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                        <div class="box e">
+                            <img src="icon-social.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box f">
+                            <img src="icon-self-care.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+                
+            </div>
+        </div>
+      
+    </body>
+</html>
+
