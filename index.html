@@ -1,80 +1,398 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html>
+    <style>
+         .a{
+            background-color: #ff8b64;
+        }
+        .b{
+            background-color: #56c2e6;
+        }
+        .c{
+            background-color: #ff5e7d;
+        }
+        .d{
+            background-color: #4bcf83;
+        }
+        .e{
+            background-color: #7235d1;
+        }
+        .f{
+            background-color: #f1c75b;
+        }
+        body{
+            background-color: #0d1323;
+            margin: 0px;
+            padding: 0px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 20px;
+        }
+        .left{
+            width: 200px;
+            height: 420px;
+            background-color: #1d204b;
+            border-radius: 8px;
+            position: relative;    
+            display: flex;
+            flex-direction: column;
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+        }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        .left-top{
+           
+            background-color: #5746ea;
+            top: 0px;
+            left: 0px;
+            width: inherit;
+            height: 70%;
+            min-height:70% ;
+            border-radius: 8px;
+            display:flex;
+            flex-direction: column;
+            max-width: inherit;
+            max-height: 70%;
+            gap: 16px;
+            
+        }
 
-  Report for
-  Jeremy Robson
+        .main-text{
+            color: white;
+            font-size: 40px;
+            font-weight: 400;
+            margin: 16px;
+            margin-top: 0px;
 
-  Daily
-  Weekly
-  Monthly
+        }
+        .pale-blue{
+            color:hsl(236, 100%, 87%);
+            font-size: 12px;
+        }
+        .lower-text-wapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: max-content;
+            width: max-content;
+            height: -webkit-fill-available;
+            padding: 16;
+            color: #62659b;
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+        }
+        .selected{
+            color: white;
+        }
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        .profile{
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border:2px solid white;
+            margin: 16px;
+            
+        }
+      
+        .other-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .row-container{
+            width: inherit;
+            height: 200px;
+            display: flex;
+            gap: 20px;
+            
+        }
+        .boxes-container{
+            width: 640;
+            height: 420;
+            display: flex;
+            align-items: center;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+        }
+        .box{
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 200px;
+            max-height: 200px;            
+            border-radius: 8px;
+            position: relative;
+            
+            
+        }
+       
+        .img{
+            right: 0px;
+            top: 0px;
+            display: block;
+            position: absolute;
+            width: 50px;
+        }
+       
+        .inner{
+            position: absolute;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 0px;
+            width: inherit;
+            height: 80%;
+            background-color: #1d204b;
+            border-radius: 8px;
+            
+        }
+        .first-row{
+            display: flex;           
+            align-items: center;
+            gap: 80px;
+            margin-left: 32px;
+        }
+       
+        .second-row{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            margin-left: 32px;
+        }
+        .left-text{
+            font-size: 24px;
+        }
+        .menu{
+            
+            height: 4px;
+        }
+        .time{
+          
+            font-size: 40px;
+        }
+        .week{
+            color: #9194c8;
+            
+        }
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+        .my-grid{
+            width: 860px;
+            height: 420px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-columns:  1fr 3fr;                        
+            gap: 20px;
+        }
+        
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+        .one{
+            
+        }
+        .two{
+            
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+       
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+
+
+
+
+
+
+
+
+        @media screen and (max-width:768px) {
+                        .profile{
+                            height: 60px;
+                        }
+                        .left{
+                            height: 200px;
+                            width: inherit;        
+                        }
+                        .left-top{
+                            width: inherit;
+                            height: 60%;
+                            min-height: 60%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 0px;
+                        }
+                        .week{
+                            color: #9194c8;
+                            margin-left: 0px;
+                            margin-top: 0px;
+                        }
+                        .my-grid{
+                            width: 400px;
+                            height: 420px;
+                            display: grid;
+
+                            grid-template-columns: 300px 1fr   ;    
+                            grid-template-columns: auto;                                
+                            gap: 20px;
+                        }
+                        .two{
+                            width: inherit;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            gap: 20px;
+                        }
+                        
+                        .box{
+                            width: inherit;
+                            min-width: 400px;            
+                        
+                        }
+                        .cover{
+                            display: flex;
+                            justify-content: center;
+                            gap: 16px;
+                        }
+                        .first-row{
+                            display: flex;           
+                            justify-content: space-around;
+                            align-items: center;
+                            margin-left: 32px;
+                        }
+                        .lower-text-wapper{
+                            margin-top: 20px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            width: inherit;
+                        }
+                        .second-row{
+                            flex-direction: row;
+                            align-items: center;
+                        }
+
+                }
+    </style>
+    <body>
+
+        <div class="my-grid">
+            
+            <div class="left">
+                <div class="left-top">
+                    <img src="./images/image-jeremy.png" alt="" class="profile">
+                    
+                    <div class="main-text">
+                        <div class="small-text pale-blue">Report for</div>
+                        <div class="big-text">Jeremy Robson</div>
+                    </div>
+                </div>
+                <div class="lower-text-wapper ">
+                    <div class="text">Daily</div>
+                    <div class="text selected">Weekly</div>
+                    <div class="text">Monthly</div>
+                </div>
+    
+            </div>
+        
+
+               
+                
+                <div class="grid-item two">
+                   
+                    <div class="box a">
+                        <img src="./images/icon-work.svg" alt="" class="img">
+                        <div class="cover">
+                            <div class="first-row">
+                                <div class="left-text selected">work</div>
+                                <img src="./images/icon-ellipsis.svg" alt="" class="menu">
+                            </div>
+                            <div class="second-row">
+                                <div class="time selected">32hrs</div>
+                                <div class="week">Last Week - 63hrs</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                        <div class="box b">
+                            <img src="./images/icon-play.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="./images/icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box c">
+                            <img src="./images/icon-study.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="./images/icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box d">
+                            <img src="./images/icon-exercise.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="./images/icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+                
+                
+                        <div class="box e">
+                            <img src="./images/icon-social.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="./images/icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box f">
+                            <img src="./images/icon-self-care.svg" alt="" class="img">
+                            <div class="cover">
+                                <div class="first-row">
+                                    <div class="left-text selected">work</div>
+                                    <img src="./images/icon-ellipsis.svg" alt="" class="menu">
+                                </div>
+                                <div class="second-row">
+                                    <div class="time selected">32hrs</div>
+                                    <div class="week">Last Week - 63hrs</div>
+                                </div>
+                            </div>
+                        </div>
+                
+            </div>
+        </div>
+      
+    </body>
 </html>
+
